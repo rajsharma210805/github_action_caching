@@ -66,9 +66,9 @@ jobs:
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.2.2
         with:
-          host: ${{ secrets.EC2_HOST1 }}
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY1 }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/frontend:latest
