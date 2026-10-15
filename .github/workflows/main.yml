@@ -1,0 +1,28 @@
+name: Frontend Deployment 
+
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/App.jsx
+    workflow_dispatch:
+
+  jobs:
+    build-and-build: 
+      runs-on: ubuntu-latest
+
+      steps:
+       #1. Download  repository code
+       - name: Checkout code
+        uses: actions/checkout@v4
+
+      #2. Set up Node.js environment 
+       - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+         node-version: '22'
+
+      #3. Cache npm dependencies using a custom key 
+       - name: Cache npm dependencies
+ 
