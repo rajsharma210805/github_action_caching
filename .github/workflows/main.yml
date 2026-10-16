@@ -1,9 +1,9 @@
-name: Frontend Deployment
+name: Frontend Deployment main
 
 on:
   push:
     branches:
-      - main 
+      - master
   workflow_dispatch:
 
 jobs:
