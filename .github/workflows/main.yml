@@ -3,9 +3,7 @@ name: Frontend Deployment
 on:
   push:
     branches:
-      - main
-    paths:
-      - 'src/App.jsx'  
+      - main 
   workflow_dispatch:
 
 jobs:
